@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>MW///L</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="/Css/PagePrincipal/style.css" />
+
+
+
+</head>
+
+<body>
+    <!-- Topo -->
+<div>
+
+    <div onclick="alterarUsuario()" class="top">
+        
+        <span><ion-icon class="imgUser" name="person-circle-outline"></ion-icon></ion-icon>
+            <div class="nameUser">Admin</div>
+        </span>
+       
+    </div>
+    <!--NavBar-->
+
+    
+    <div class="navigation">
+        <div>
+            <img class="imgLogo" src="/Telas/img/logoLogin.png" >
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                        <span class="title">Estoque</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                        <span class="title">Vendas</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="document-text-outline"></ion-icon></span>
+                        <span class="title">Relatórios</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="wallet-outline"></ion-icon></span>
+                        <span class="title">Financeiro</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cog-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Configuração</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" onclick="sair()">
+                        <span class="icon"><ion-icon name="arrow-undo-outline"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/Telas/Js/PagePrincipal/main.js"></script>
+
+
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item)=>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+</script>
+
+
+
+</body>
+</html>
